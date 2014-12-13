@@ -1,0 +1,44 @@
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-static-top navbar-inverse" style="background-color:black;">
+        <div class="container">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="row"><h1 class="loadhome span3"><a href="index.html"></a></h1>
+			  <div class="nav-collapse collapse"><br/>
+				<ul class="nav pull-right">
+				<li><%= link_to "signin", new_user_session_path%></li>
+				<li><% if user_signed_in? %>
+				<%= link_to 'Sign Out', destroy_user_session_path, method:
+				:delete %>
+				<% end %></li>
+				
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "About us", mother_about_path%></li>
+
+					<li><%= link_to "help", mother_help_path%></li>
+					<li><%= link_to "contact", mother_contact_path%></li>
+
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+					  <ul class="dropdown-menu">
+					  <li class="nav-header">Medical Department</li>
+						<li><%= link_to "Dos and Donts", dos_donts_path %></li>
+						<li><a href="#">Treatment one</a></li>
+						<li><a href="#">Treatment one</a></li>
+						<li class="divider"></li>
+						<li class="nav-header">Sergical Department</li>
+						<li><a href="#">Treatment three</a></li>
+						<li><a href="#">Treatment four</a></li>
+					  </ul>
+					</li>
+					
+				</ul>
+			  </div>
+		  </div>
+        </div>
+    </div>
